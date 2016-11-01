@@ -1,0 +1,10 @@
+ introduction==
+ # Ceci est la description du TP
+ En markdown
+ ==
+ 
+ # ce qui suit est la liste des exercice du TP (ici avec un seul exercice) 
+ # ces exercice seront affichés dans l'ordre dans le quizz moodle.
+ concept==
+ @ /python/monnom/exo1.pl
+ ==
