@@ -3,7 +3,7 @@ author=Dominique Revuz
 name=  Pim Pim Pim Pim
 title=  Pim Pim Pim Pim  # N'oubliez pas de remplir ce champs svp
 tag= def|return  # N'oubliez pas de remplir ce champs svp
-template=/python/IUT/template.pl
+template=/python/template.pl
 
 taboo=print
 text==
@@ -26,15 +26,15 @@ text==
 
 pltest==
 >>> pim(0)
-Pas de Pim
+'Pas de Pim'
 >>> pim(1) # pas despace dans la solution 
-Pim
+'Pim'
 >>> pim(1) # pas despace à la fin
-Pim
+'Pim'
 >>> pim(12) # plein de pimme 
-Pim Pim Pim Pim Pim Pim Pim Pim Pim Pim Pim Pim
+'Pim Pim Pim Pim Pim Pim Pim Pim Pim Pim Pim Pim'
 >>> pim(-777) #vraiment négatif
-Pas de Pim
+'Pas de Pim'
 ==
 
 
@@ -42,7 +42,7 @@ testcode==
 # p r i n t pour tester taboo et ca marche 
 def pim(n):
 	if n>0:
-		print("Pim "*(n-1)+"Pim")
+		return("Pim "*(n-1)+"Pim")
 	else:
-		print("Pas de Pim")
+		return("Pas de Pim")
 ==
