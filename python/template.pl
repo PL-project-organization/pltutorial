@@ -1,6 +1,6 @@
 # Copyright 2016 Dominique Revuz <dr@univ-mlv.fr>
 
-name=  python/iut/template.pl
+name=  NomParDefault
 
 grader==
 from utils import grade
