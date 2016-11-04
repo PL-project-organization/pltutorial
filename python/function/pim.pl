@@ -8,9 +8,9 @@ template=/python/template.pl
 taboo=print
 text==
 
-# Ecrire une fonction **pim**
+# Ecrire une fonction 
 
-	Qui prend un parametre entier n et qui retourne des Pim :
+Ecrire une fonction **pim** qui prend un parametre un entier n et qui retourne des Pim :
 
 	Si n < 1 retourne la chaine  "Pas de Pim"
 	sinon retourne la chaine "Pim" pour n = 1
@@ -19,8 +19,7 @@ text==
 	etc
 
 # taboo
-
-	Ne pas utiliser print.
+Un taboo est un mot interdit dans votre programme, ici le taboo est la fonction **print**. Ce qui n'est pas un problème votre fonction ne faisant pas d'affichage.
 
 ==
 
