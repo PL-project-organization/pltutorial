@@ -17,20 +17,21 @@ Si ce n'est pas un ensemble cela fait une erreur mais c'est pas grave.
 Exemple :
 	subsets({"Toto","titi"})
 	retourne 
-	[[], ['titi'], ['Toto'], ['titi', 'Toto']]
+	[set(), {'titi'}, {'Toto'}, {'titi', 'Toto'}]
 
 ==
 
 pltest==
 >>> subsets(set([]))
-[[]]
+[set()]
 >>> subsets({"Toto","titi"})
-[[], ['titi'], ['Toto'], ['titi', 'Toto']]
+[set(), {'titi'}, {'Toto'}, {'titi', 'Toto'}]
 >>> subsets(set([1,2,3,4,5])
 [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3], [4], [1, 4], [2, 4], [1, 2, 4], [3, 4], [1, 3, 4], [2, 3, 4], [1, 2, 3, 4]]
 >>> 
 ==
 
 testcode==
-subsets = lambda x: [set([y for j, y in enumerate(set(x)) if (i >> j) & 1]) for i in range(2**len(set(x)))]
+def subsets(x):
+	return [set([y for j, y in enumerate(set(x)) if (i >> j) & 1]) for i in range(2**len(set(x)))]
 ==
