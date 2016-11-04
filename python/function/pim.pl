@@ -12,10 +12,10 @@ text==
 
 	Qui prend un parametre entier n et qui retourne des Pim :
 
-	Si n < 1 retourne la chaine  **Pas de Pim**
-	sinon retourne la chaine **Pim** pour n = 1
-	      retourne la chaine **Pim Pim** pour n = 2
-	      retourne la chaine **Pim Pim Pim** pour n = 3
+	Si n < 1 retourne la chaine  "Pas de Pim"
+	sinon retourne la chaine "Pim" pour n = 1
+	      retourne la chaine "Pim Pim" pour n = 2
+	      retourne la chaine "Pim Pim Pim" pour n = 3
 	etc
 
 # taboo
