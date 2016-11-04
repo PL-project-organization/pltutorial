@@ -1,6 +1,6 @@
 template=/python/template.pl
 title=Fizz Buzz 
-
+name= Fizz et Buzz
 text==
 #  Fizz Buzz 
 Veuillez écrire une fonction **fizzbuzz(n)** qui prend en parametre un entier
