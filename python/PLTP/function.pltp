@@ -46,8 +46,8 @@ Pour tester une fonction **Kiki** que vous avez ecrite dans un fichier **exo14.p
 ==
 
 concept==function
-@ /python/function/pim.pl
 @ /python/function/pom.pl
+@ /python/function/pim.pl
 @ /python/function/carre.pl
 @ /python/function/carrecube.pl
 @ /python/function/randomcolor1.pl
