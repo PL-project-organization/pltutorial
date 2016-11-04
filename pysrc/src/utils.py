@@ -140,7 +140,7 @@ def erreurdexecution(message):
 	appeller avec la concaténation de stdout et sdterr
 	"""
 	dico_reponse = { "success": False ,
-	 "feedback": "# Erreur à l'exécution\n Il semble qu'une erreur de programmation c'est glissée dans votre code \n# la Sortie standard\n"+str(message),"errormessages" : "" , "other": "","error":"","execution":"" }
+	 "feedback": "# Erreur à l'exécution\n Il semble qu'une erreur de programmation\n s'est glissée dans votre code \n# la Sortie standard\n"+str(message),"errormessages" : "" , "other": "","error":"","execution":"" }
 	dodump(dico_reponse)
 
 def failure(message):
