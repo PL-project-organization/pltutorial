@@ -371,7 +371,7 @@ def testpltest():
 	if d['result']:
 		success("# Bravo \n\nTout les tests sont passés \n\n")
 	else:
-		erreurdexecution(d['stdout'])
+		erreurdexecution("# Execution des Tests\n\n"+"<br>".join(d['stdout'].split("\n")))
 
 
 def testsoluce():
