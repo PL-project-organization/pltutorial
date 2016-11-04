@@ -8,10 +8,10 @@ text==
 
 Ecrire une fonction **pom** qui prend un parametre entier n et qui Affiche des Pom :
 
-	Si n < 1 affiche **Pas de Pom**
-	sinon affiche **Pom** pour n = 1
-	      affiche **Pom Pom** pour n =2
-	      affiche **Pom Pom Pom** pour n =
+	Si n < 1 affiche "Pas de Pom"
+	sinon affiche "Pom" pour n = 1
+	      affiche "Pom Pom" pour n =2
+	      affiche "Pom Pom Pom" pour n =
 	etc
 
 
