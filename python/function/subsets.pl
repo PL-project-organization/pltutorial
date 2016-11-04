@@ -7,6 +7,7 @@ template=/python/template.pl
 
 text==
 # Sous ensembles
+## Exercice difficile
 Ecrire une fonction **subsets** qui retourne l'ensemble des sous ensembles de l'ensemble passé en parametre.
 
 Si ce n'est pas un ensemble cela fait une erreur mais c'est pas grave.
@@ -17,7 +18,7 @@ Exemple :
 	retourne 
 	[[], ['titi'], ['Toto'], ['titi', 'Toto']]
 
-=
+==
 
 pltest==
 >>> subsets(set([]))
