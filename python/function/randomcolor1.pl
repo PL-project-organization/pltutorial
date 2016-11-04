@@ -1,7 +1,7 @@
 # Copyright 2016 Dominique Revuz <dr@univ-mlv.fr>
 author=Dominique Revuz 
 title=Des couleurs aléatoires
-name=randomcolor1.pl
+name=Des Couleurs aléatoires
 # N'oubliez pas d'indiquez les tags
 tag=list|function|random
 template=/python/template
@@ -16,8 +16,10 @@ La liste de couleur est fournie en paramêtre de la fonction.
 Exemple:
 
 	randomcolor(['blue','red','white','black'])
-	retourne 
+	retourne par exemple
 	blue
+
+Pour avoir un entier aléatoire il faut utiliser **randint** 
 
 ==
 code==
