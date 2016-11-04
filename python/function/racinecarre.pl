@@ -1,5 +1,5 @@
 # ceci est un exercice Premier langage
-
+title= Une racine Carrée
 tag=math|exponentiation|parameter
 template=/python/template
 piste=verte
@@ -7,7 +7,7 @@ text==
 
 # Racine Carrée
 
-Ecrire une fonction **racinecarre** qui calcul la racine carré de son paramètre.
+Ecrire une fonction **racinecarre** qui retourne la racine carré de son paramètre.
 
 Deux posibilité soit vous allez chercher dans une librairie une fonction **sqrt** (square root) qui vous utilisez.
 Soit vous savez que la racine carré de n est n à l'exposant 1/2 et que l'opérateur de puissance en python est \*\* (double étoile).
