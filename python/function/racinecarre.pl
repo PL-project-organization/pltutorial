@@ -1,5 +1,7 @@
 # ceci est un exercice Premier langage
 title= Une racine Carrée
+name=Racine Carrée
+
 tag=math|exponentiation|parameter
 template=/python/template
 piste=verte
