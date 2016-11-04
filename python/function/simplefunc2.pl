@@ -1,6 +1,7 @@
 # Copyright 2016 Dominique Revuz <dr@univ-mlv.fr>
 author=Dominique Revuz 
 title= Fibo
+name= Fibo
 tag=root # N'oubliez pas de remplir ce champs svp
 template=/python/template.pl
 text==
