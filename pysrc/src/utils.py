@@ -149,7 +149,7 @@ def failure(message):
 	le message contient le nombre de tests réussis et le test en échec
 	"""
 	dico_reponse = { "success": False , "errormessages" : "" ,
-	 "feedback": "#Mauvais résultat \n Il n'y a pas d'erreur dans votre code \n Mais il ne calcul pas le résultat attendu\n # Execution \n "+str(message), "other":"" ,"error":"","execution":""}
+	 "feedback": "#Mauvais résultat \n Il n'y a pas d'erreur dans votre code \n Mais il ne calcule pas le résultat attendu\n # Execution \n "+str(message), "other":"" ,"error":"","execution":""}
 	dodump(dico_reponse)
 
 def plateform(dexec,feedback="# Erreur Plateforme \n Un problème de la plateforme\\n parlez en au professeur\\n passez à l'exercice suivant"):
@@ -232,6 +232,7 @@ def exectojson(target,infile=None,jsonfile=None,timeout=1):
 
 def compiletest():
 	"""
+	TODO ne détecte pas les erreurs de compile dans une fonction
 	>>> _createStudentCode("@ <- ça grosse erreur de compile ")
 	>>> compiletest()
 	Traceback (most recent call last):
@@ -245,6 +246,7 @@ def compiletest():
 	import py_compile
 	try:
 		x= py_compile.compile("student.py",doraise=True)
+		print("Compile status ",x)
 	except Exception as EE:
 		EEE=EE
 	else:

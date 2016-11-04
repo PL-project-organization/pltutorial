@@ -24,7 +24,8 @@ def openandsplit(filename):
 		sys.exit(1)
 
 """
-
+env racine="la racine de votre repository"
+cd $racine
 python3 check.py python/.../exo.pl
 
 permet de verifier si est syntaxiquement correct et si les fichiers existent.
@@ -41,6 +42,9 @@ verifier l'execution du grader dans /tmp
 verifier Error de execution avec student vide
 si soluce verifier ok avec student copie de soluce 
 verifier Error avec erreur de compile
+
+Faire un check au niveau pltp.
+Avec verification de tout les fichiers liés
 
 """
 
@@ -114,7 +118,9 @@ def baseline(text,d):
 		return False,d
 	return None,None
 
-racine="/Users/dr/DJANGO/plbank"
+
+racine=os.environ["racine"] 
+#racine="/Users/dr/DJANGO/pltutorial"
 
 
 def printdico(d):
@@ -171,11 +177,16 @@ def buildir(dic, namedic={"grader":"grader.py","testcode":"testcode.py","soluce"
 
 
 	if not "text" in dic:
-		perror("N'a pas de balise text")
+		perror("N'a pas de balise text c'est à dire pas de sujet pour l'élève")
+		sys.exit(1)
+	if not "name" in dic:
+		perror("N'a pas de balise Name obligatoire")
+		sys.exit(1)
 	if not "pltest" and not "soluce" and not "expectedoutput":
 		perror("pas de balise d'évaluation")
 	if not "grader" in dic and not "basefiles" in dic:
-		perror("Warning no grader")
+		perror("Error no grader")
+		sys.exit(1)
 	else:
 		for k in dic:
 			if k in namedic:
@@ -232,17 +243,16 @@ def main(plname,dirname=None):
 def createStudentPy(text):
 	with open("student.py","w") as f :
 		print(text,file=f)
-
+	return
 
 def createStudentFromSoluce():
 	try:
 		with open("soluce.py","r") as solf :
 			text = solf.read()
 			createStudentPy(text)
-			return True
 	except IOError as e:
 		return False
-
+	return True
 
 
 pldicsingleton=None
@@ -277,12 +287,14 @@ def testexecution(dummy):
 	dicr = {"plateforme":True,"stderr":cp.stderr,"result":cp.returncode==0,"stdout":cp.stdout}
 	if getExecDic(dicr)["success"] :
 		print("ERREUR : Non détection d'une erreur de compilation : ",cp.stdout)
-	else:
-		print("test compil ok")
+
 	# Test is soluce ok
 	if createStudentFromSoluce():
 		cp = subprocess.run(args, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE,stderr=subprocess.PIPE, timeout=timeout)
 		dicr = {"plateforme":True,"stderr":cp.stderr,"result":cp.returncode==0,"stdout":cp.stdout}
+		print("### ",cp.stdout)
+		if cp.stdout == b'' :
+			print("test soluce sans sortie standard")
 		if getExecDic(dicr)["success"] :
 			print("test soluce against la soluce ok")
 		else:
@@ -333,5 +345,4 @@ if __name__ == '__main__':
 				testexecution(dirname)
 				dirname += "N"
 				sys.argv.pop(0)
-		print(" Fin du Test ")
 
