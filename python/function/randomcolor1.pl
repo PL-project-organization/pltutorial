@@ -1,13 +1,14 @@
 # Copyright 2016 Dominique Revuz <dr@univ-mlv.fr>
 author=Dominique Revuz 
-title=randomcolor1.pl
+title=Des couleurs aléatoires
+name=randomcolor1.pl
 # N'oubliez pas d'indiquez les tags
 tag=list|function|random
 template=/python/template
 tag=function|random|list
 text==
 
-# Couleur aléatoire
+# Couleurs aléatoires
 L'objectif est de fournir une fonction qui fournis une couleur tirée aléatoirement dans une liste de couleurs.
 La fonction s'appelle **randomcolor**.
 La liste de couleur est fournie en paramêtre de la fonction.
