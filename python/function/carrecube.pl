@@ -11,10 +11,9 @@ text==
 
 # Ecrire deux fonctions **carre** et **cube**
  
-	Qui prend un parametre entier n et qui retourne :
-
-	carre(n) retourne n*n
-	cube(n) retourne n*n*n  ou n**3
+Qui prennent un parametre entier n  :
+	carre(n) retourne n*n de ce parametre
+	cube(n) retourne n*n*n  ou n**3 de ce parametre
 
 # taboo
 
