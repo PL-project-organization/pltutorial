@@ -1,0 +1,14 @@
+
+pushd `dirname $0` > /dev/null
+racine=`pwd -P`
+export racine 
+popd > /dev/null
+for i in $*
+do
+rm -Rf kiki
+echo "TESTING $racine/$i"
+python3 pysrc/src/check.py -d kiki /$i
+echo "FIN TESTING"
+
+done
+
