@@ -19,7 +19,7 @@ Exemple:
 	retourne par exemple
 	blue
 
-Pour avoir un entier aléatoire il faut utiliser **randint** 
+Pour avoir un entier aléatoire il faut utiliser **randint** https://docs.python.org/3/library/random.html .
 
 ==
 code==
