@@ -108,7 +108,6 @@ def dodump(dr,ev=0):
 	if "help" in pld:
 		dr['feedback'] += pld["help"]
 	if dr["success"] and "taboo" in pld and checktaboo(pld["taboo"]):
-		print("taboo",file=sys.stderr)
 		dr["success"]=False
 		dr['feedback'] += "# TABOOOOO \n\n Vous avez utilisé un terme interdit \n\n"+pld['taboo']
 	print(json.dumps(dr))
@@ -246,7 +245,6 @@ def compiletest():
 	import py_compile
 	try:
 		x= py_compile.compile("student.py",doraise=True)
-		print("Compile status ",x)
 	except Exception as EE:
 		EEE=EE
 	else:
